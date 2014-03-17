@@ -1,0 +1,823 @@
+fileFormatVersion: 2
+guid: 54a373cb9b89d2241a7a73b34ab97628
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: Sprite_Bot_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1033
+        width: 123
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_25
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1031
+        width: 122
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_26
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1029
+        width: 120
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_27
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1029
+        width: 116
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_28
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1026
+        width: 108
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_29
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1026
+        width: 106
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_30
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1026
+        width: 105
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_31
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1026
+        width: 103
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_32
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1026
+        width: 100
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_42
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 876
+        width: 98
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_43
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 879
+        width: 99
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_44
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 877
+        width: 101
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_45
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 876
+        width: 106
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_46
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 881
+        width: 108
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_47
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 884
+        width: 120
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_48
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 884
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_49
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 881
+        width: 113
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_50
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 879
+        width: 104
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_60
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 736
+        width: 106
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_61
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 736
+        width: 108
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_62
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 736
+        width: 103
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_63
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 734
+        width: 98
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 734
+        width: 101
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_65
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 734
+        width: 108
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_66
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 734
+        width: 110
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_67
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 734
+        width: 113
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_68
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 736
+        width: 115
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_97
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 370
+        width: 108
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_98
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 369
+        width: 106
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_99
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 370
+        width: 108
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_100
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 370
+        width: 108
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_101
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 370
+        width: 107
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_102
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 368
+        width: 108
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_103
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 368
+        width: 108
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_104
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 368
+        width: 111
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_105
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 370
+        width: 108
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_107
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 370
+        width: 113
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_108
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 370
+        width: 118
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_112
+      rect:
+        serializedVersion: 2
+        x: 2284
+        y: 466
+        width: 44
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_113
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 466
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_114
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 434
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_115
+      rect:
+        serializedVersion: 2
+        x: 2218
+        y: 414
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_116
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 419
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_117
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 414
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_118
+      rect:
+        serializedVersion: 2
+        x: 2284
+        y: 419
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_119
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 419
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_120
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 277
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_121
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 213
+        width: 111
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_122
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 213
+        width: 113
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_123
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 210
+        width: 122
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_124
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 210
+        width: 116
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_125
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 210
+        width: 117
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_126
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 210
+        width: 113
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_127
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 210
+        width: 105
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_128
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 208
+        width: 98
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_129
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 205
+        width: 95
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_130
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 205
+        width: 113
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_131
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 205
+        width: 115
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_132
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 205
+        width: 118
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_133
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 205
+        width: 118
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_134
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 208
+        width: 113
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_135
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 205
+        width: 111
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_136
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 208
+        width: 110
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_137
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 208
+        width: 110
+        height: 137
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_138
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 31
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_139
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 31
+        width: 86
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_140
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 31
+        width: 79
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_141
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 31
+        width: 79
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_142
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 31
+        width: 83
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_143
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 33
+        width: 83
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_144
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 33
+        width: 84
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_145
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 33
+        width: 83
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_146
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 33
+        width: 86
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_147
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 33
+        width: 90
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_148
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 33
+        width: 88
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_149
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 33
+        width: 86
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_150
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 33
+        width: 84
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_151
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 33
+        width: 84
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_152
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 43
+        width: 88
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_153
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 43
+        width: 89
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_154
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 43
+        width: 88
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_155
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 44
+        width: 88
+        height: 134
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_156
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 43
+        width: 86
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_157
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 43
+        width: 88
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_158
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 43
+        width: 88
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: Sprite_Bot_159
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 43
+        width: 88
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
