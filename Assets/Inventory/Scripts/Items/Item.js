@@ -62,7 +62,12 @@ function OnMouseDown()
 //Picking up the Item.
 function PickUpItem ()
 {
-	var getit=true;
+
+ //var posItem=Transform.position;
+//var posPlayer= Vector3.zero;
+//Debug.Log("PosItem" +posItem);
+//Debug.Log("PosPlayer" +posPlayer);
+
 	if(canGet){//if its getable or hasnt been gotten.
 	
 	playersinv.gameObject.SendMessage ("PlayPickUpSound", SendMessageOptions.DontRequireReceiver); //Play sound
@@ -118,7 +123,7 @@ function MoveMeToThePlayer(itemHolderObject : Transform)
 	
 	GetComponent("Item").enabled = false;
 	
-	//transform.parent = itemHolderObject;
+	transform.parent = itemHolderObject;
 	transform.localPosition = Vector3.zero+Vector3(0,0.5,0);
 	
 	

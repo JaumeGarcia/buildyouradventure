@@ -79,7 +79,7 @@ public class PlayerControl : MonoBehaviour
 		//Debug.Log (grounded);
 		if(Input.GetKeyDown (KeyCode.Space) && grounded) // If the jump button is pressed and the player is grounded then the player jumps 
 		{
-			rigidbody2D.AddForce(Vector2.up * 300f);
+			rigidbody2D.AddForce(Vector2.up * 200f);
 
 			//Pruebas para cambiar sprite en tiempo real
 			//Sprite[] spr = Resources.LoadAll<Sprite>("linkEdi");

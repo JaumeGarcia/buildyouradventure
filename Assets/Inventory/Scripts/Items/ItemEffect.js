@@ -25,6 +25,7 @@ function Awake ()
 function UseEffect () 
 {
 	Debug.LogWarning("<INSERT CUSTOM ACTION HERE>"); //INSERT CUSTOM CODE HERE!
+	Enemydmg.salud=100;
 	
 	//Play a sound
 	playersInv.gameObject.SendMessage("PlayDropItemSound", SendMessageOptions.DontRequireReceiver);
