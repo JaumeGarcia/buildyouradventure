@@ -1,5 +1,5 @@
 //This is the central piece of the Inventory System.
-
+var info:GUIText;
 var Contents : Transform[]; //The content of the Inventory
 var MaxContent : int = 12; //The maximum number of items the Player can carry.
 
@@ -29,11 +29,14 @@ function AddItem(Item:Transform)
 {
 	var newContents = new Array(Contents);
 	newContents.Add(Item);
+	info.guiText.text=Item.name+" ha sido añadido al inventario";
 	Contents=newContents.ToBuiltin(Transform); //Array to unity builtin array
+	
 	
 	if (DebugMode)
 	{
 		Debug.Log(Item.name+" has been added to inventroy");
+		
 	}
 	
 	//Tell the InventoryDisplay to update the list.

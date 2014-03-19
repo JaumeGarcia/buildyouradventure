@@ -1,7 +1,7 @@
 #pragma strict
 
 //This script allows you to insert code when the Item is used (clicked on in the inventory).
-
+var info:GUIText;
 var deleteOnUse = true;
 
 private var playersInv : Inventory;
@@ -26,6 +26,7 @@ function UseEffect ()
 {
 	Debug.LogWarning("<INSERT CUSTOM ACTION HERE>"); //INSERT CUSTOM CODE HERE!
 	Enemydmg.salud=100;
+	info.guiText.text="Has usado una pocion!";
 	
 	//Play a sound
 	playersInv.gameObject.SendMessage("PlayDropItemSound", SendMessageOptions.DontRequireReceiver);
@@ -43,6 +44,7 @@ function DeleteUsedItem()
 	if (item.stack == 1) //Remove item
 	{
 		playersInv.RemoveItem(this.gameObject.transform);
+		
 	}
 	else //Remove from stack
 	{

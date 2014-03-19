@@ -1,4 +1,4 @@
-
+public var info: GUIText;
 var itemIcon : Texture2D; //The Icon.
 var canGet = true; //If we can pick up the Item.
 var itemType : String; //This will let us equip the item to specific slots. Ex: Head, Shoulder, or whatever we set up. If the item is equipment (or weapon) this needs to match a slot to work properly.
@@ -12,11 +12,12 @@ var isAlsoWeapon = false; //Is the Item also a Weapon? This only works with isEq
 //This is the object we will instantiate in the Players hand.
 //We use this so we can have two versions of the weapon. One for picking up and one for using.
 var equippedWeaponVersion : Transform;
-
+public var protagonista : GameObject;
 //These will store information about usefull components.
 static var playersinv : Inventory;
 
 private var FPPickUpFound = false;
+
 
 @script AddComponentMenu ("Inventory/Items/Item")
 
@@ -49,11 +50,29 @@ function Awake ()
 	}
 }
 
+function isInRango()
+{
+	protagonista = GameObject.Find("Link");
+	restaX = protagonista.transform.position.x - transform.position.x;
+	restaY = protagonista.transform.position.y - transform.position.y;
+	
+	Debug.Log(restaX + " " + restaY);
+	if (restaX >= -0.6 && restaX <= 0.6)
+	{
+		if (restaY >= -0.63 && restaY <= 0.63)
+		{
+			return true;
+		}
+	}
+	return false;
+}
 //When you click an item
 function OnMouseDown()
 {
+	
+
 	//If the 'FirstPersonPickUp' script is not attached we want to pick up the item.
-	if (FPPickUpFound == false)
+	if (FPPickUpFound == false && isInRango())
 	{
 		PickUpItem();
 	}
@@ -94,12 +113,17 @@ function PickUpItem ()
 		//If we can get it and the inventory isn't full.
 		if (getit && playersinv.Contents.length < playersinv.MaxContent)
 		{
+		
+		
 			playersinv.AddItem(this.transform);
-			MoveMeToThePlayer(playersinv.itemHolderObject);//moves the object, to the player
+			MoveMeToThePlayer(playersinv.itemHolderObject);//moves the object, to the player7
+			
+			
 		}
 		else if (playersinv.Contents.length >= playersinv.MaxContent)
 		{
 			Debug.Log("Inventory is full");
+			info.guiText.text="Inventario lleno";
 		}
 	}
 }
@@ -115,15 +139,23 @@ function MoveMeToThePlayer(itemHolderObject : Transform)
 	{
 		GetComponent(MeshRenderer).enabled = false;
 	}
+	if (GetComponent(SpriteRenderer) != null)
+	{
+		GetComponent(SpriteRenderer).enabled = false;
+	}
 	
 	if (GetComponent(Collider) != null)
 	{
 		GetComponent(Collider).enabled = false;
 	}
+	if (GetComponent(BoxCollider2D) != null)
+	{
+		GetComponent(BoxCollider2D).enabled = false;
+	}
 	
 	GetComponent("Item").enabled = false;
 	
-	transform.parent = itemHolderObject;
+transform.parent = itemHolderObject;
 	transform.localPosition = Vector3.zero+Vector3(0,0.5,0);
 	
 	
@@ -141,10 +173,18 @@ function DropMeFromThePlayer(makeDuplicate : boolean)
 		{
 			GetComponent(MeshRenderer).enabled = true;
 		}
+		if (GetComponent(SpriteRenderer) != null)
+		{
+			GetComponent(SpriteRenderer).enabled = true;
+		}
 		
 		if (GetComponent(Collider) != null)
 		{
 			GetComponent(Collider).enabled = true;
+		}
+		if (GetComponent(BoxCollider2D) != null)
+		{
+			GetComponent(BoxCollider2D).enabled = true;
 		}
 	
 		GetComponent("Item").enabled = true;
