@@ -6,10 +6,6 @@ public static var cor:int=1;
 
  
  function OnCollisionEnter2D(coll: Collision2D) {
-   	
-   	
-   	
-   	
    	if (coll.gameObject.tag== "Enemy"){
 		
 			if (shield>0)
@@ -21,26 +17,10 @@ public static var cor:int=1;
 				salud=salud-10;
 				
 			}
-		
-		
 		}
-		
-		
-		
-	if(salud<=0){
-	//Destroy(gameObject);
-	print("GAME OVER");
-	GameOver.guiText.text= "GAME OVER";
 }
-      
- }
- 
  
  
 function Upload(){
-
-
-
-    
 
 }

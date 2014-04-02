@@ -1,5 +1,6 @@
 //Displaying the Inventory.
-
+var hierba: Texture2D;
+var pico2D: Texture2D;
 //Variables for dragging:
 static var itemBeingDragged : Item; //This refers to the 'Item' script when dragging.
 private var draggedItemPosition : Vector2; //Where on the screen we are dragging our Item.
@@ -15,12 +16,14 @@ var itemIconSize : Vector2 = Vector2(60.0, 60.0); //The size of the item icons.
 var updateListDelay = 9999;//This can be used to update the Inventory with a certain delay rather than updating it every time the OnGUI is called.
 //This is only useful if you are expanding on the Inventory System cause by default Inventory has a system for only updating when needed (when an item is added or removed).
 private var lastUpdate = 0.0; //Last time we updated the display.
-private var UpdatedList : Transform[]; //The updated inventory array.
+static var UpdatedList : Transform[]; //The updated inventory array.
+
+
 
 //More variables for the window:
 static var displayInventory = false; //If inv is opened.
 private var windowRect =Rect (200,200,108,130); //Keeping track of the Inventory window.
-var invSkin:GUISkin; //This is where you can add a custom GUI skin or use the one included (InventorySkin) under the Resources folder.
+	var invSkin:GUISkin; //This is where you can add a custom GUI skin or use the one included (InventorySkin) under the Resources folder.
 var Offset : Vector2 = Vector2 (7, 12); //This will leave so many pixels between the edge of the window (x = horizontal and y = vertical).
 var canBeDragged = true; //Can the Inventory window be dragged?
 
@@ -113,7 +116,7 @@ function Update()
 //Drawing the Inventory window
 function OnGUI()
 {
-	GUI.skin = invSkin; //Use the invSkin
+	//GUI.skin = invSkin; //Use the invSkin
 	if(itemBeingDragged != null) //If we are dragging an Item, draw the button on top:
 	{
 		GUI.depth = 3;
@@ -127,9 +130,10 @@ function OnGUI()
 		windowRect = GUI.Window (0, windowRect, DisplayInventoryWindow, "Inventory");
 	}
 }
-
+static var nombreItem2;
+var  repeticiones=0;
 //Setting up the Inventory window
-function DisplayInventoryWindow(windowID:int)
+ function DisplayInventoryWindow(windowID:int)
 {
 
 	if (canBeDragged == true)
@@ -143,6 +147,14 @@ function DisplayInventoryWindow(windowID:int)
 	for(var i:Transform in UpdatedList) //Start a loop for whats in our list.
 	{
 		var item=i.GetComponent(Item);
+		 var nombreItem=i.GetComponent(Item).itemType;
+	
+		 nombreItem2=nombreItem;
+		// if(repeticiones==0){
+		 	 Craft(nombreItem);
+		 //	 repeticiones=1;
+		 //	 }
+		
 		if (cSheetFound) //CSheet was found (recommended)
 		{
 			if(GUI.Button(Rect(currentX,currentY,itemIconSize.x,itemIconSize.y),item.itemIcon))
@@ -169,13 +181,13 @@ function DisplayInventoryWindow(windowID:int)
 							draggedItemPosition.y=Screen.height-Input.mousePosition.y-15;
 							draggedItemPosition.x=Input.mousePosition.x+15;
 						}
-						else
+					else
 						{
 							i.GetComponent(ItemEffect).UseEffect(); //It's not equipment so we just use the effect.
 						}
 					}
 				}
-				else if (Event.current.button == 1) //If it was a right click we want to drop the item.
+				else if (Event.current.button == 0) //If it was a right click we want to drop the item.
 				{
 					associatedInventory.DropItem(item);
 				}
@@ -195,6 +207,8 @@ function DisplayInventoryWindow(windowID:int)
 				}
 			}
 		}
+		
+		
 		
 		if(item.stackable) //If the item can be stacked:
 		{
@@ -219,3 +233,46 @@ function ClearDraggedItem()
 {
 	itemBeingDragged=null;
 }
+
+var cesped=0;
+var piedra=0;
+var madera=0;
+var agua=0;
+var picoCreado=0;
+
+function Craft(nombreItem: String){
+if(nombreItem=="madera"){
+		 Debug.Log("esto furula");
+		 Debug.LogError("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!");
+		 madera=madera+1;
+		
+		 }
+ if(nombreItem=="Cesped"){ 
+ 
+ cesped=cesped+1;   
+ }
+ 
+ 
+  if(nombreItem=="piedra"){ 
+  piedra=piedra+1;  
+  } 
+   if(piedra>0 &&madera>0 && picoCreado==0){ 
+   Debug.Log("SE CREA PICO");
+   
+   var pico : GameObject = new GameObject("pico"); 
+     pico.AddComponent(Item);
+       var scrPico : Item = pico.GetComponent(Item); 
+        scrPico.itemType = "pico"; 
+        scrPico.itemIcon= pico2D; 
+        
+        
+        picoCreado=1;
+     
+       
+        associatedInventory.AddItem(pico.transform);  
+      //  associatedInventory.DropItem(piedra);
+        //associatedInventory.DropItem(madera);
+   
+   }   
+   
+         } 

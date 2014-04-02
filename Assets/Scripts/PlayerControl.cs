@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -61,18 +62,45 @@ public class PlayerControl : MonoBehaviour
 
 	void Movement() //function that stores all the movement
 	{
+		Vector3 mouse_pos;
+		Vector3 object_pos;
+		mouse_pos = Input.mousePosition;
+		object_pos = Camera.main.WorldToScreenPoint (transform.position);
 		anim.SetFloat ("velocidad", Mathf.Abs (Input.GetAxis ("Horizontal")));
+		if(mouse_pos.x>object_pos.x){
+			anim.SetBool("derecha",true);
+		}else{
+			anim.SetBool("derecha",false);
+		}
 		if(Input.GetKey (KeyCode.D))
 		{
 			transform.Translate(Vector3.right * 4f * Time.deltaTime); 
+			if(mouse_pos.x>object_pos.x){
 			anim.SetBool("derecha",true);
+			}else{
+				anim.SetBool("derecha",false);
+			}
 			//transform.eulerAngles = new Vector2(0, 0); //this sets the rotation of the gameobject
 		}
+		if (Input.GetKey (KeyCode.Escape)) {
 
+			if( EditorApplication.currentScene=="level01"){
+		Application.LoadLevel("MainMenu");}
+			else{
+				Application.LoadLevel("level01");
+
+			}
+
+
+				}
 		if(Input.GetKey (KeyCode.A))
 		{
 			transform.Translate(Vector3.left * 4f * Time.deltaTime);
-			anim.SetBool("derecha",false);
+			if(mouse_pos.x<object_pos.x){
+				anim.SetBool("derecha",false);
+			}else{
+				anim.SetBool("derecha",true);
+			}
 			//transform.eulerAngles = new Vector2(0, 180); //this sets the rotation of the gameobject
 
 		}

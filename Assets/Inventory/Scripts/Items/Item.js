@@ -1,5 +1,6 @@
 public var info: GUIText;
 var itemIcon : Texture2D; //The Icon.
+var itemIcon2 : Texture2D;
 var canGet = true; //If we can pick up the Item.
 var itemType : String; //This will let us equip the item to specific slots. Ex: Head, Shoulder, or whatever we set up. If the item is equipment (or weapon) this needs to match a slot to work properly.
 var stackable = false; //Is it stackable? If yes then items with the same itemType will be stacked.
@@ -7,8 +8,10 @@ var maxStack = 20; //How many Items each stack can have before creating a new on
 var stack = 1; //This is how many stack counts this Item will take up.
 var isEquipment = true; //Can the Item be equipped? This includes weapons.
 var isAlsoWeapon = false; //Is the Item also a Weapon? This only works with isEquipment set to true.
+var construir=true;
 
-
+var contador=0;
+var dureza=2;
 //This is the object we will instantiate in the Players hand.
 //We use this so we can have two versions of the weapon. One for picking up and one for using.
 var equippedWeaponVersion : Transform;
@@ -37,7 +40,7 @@ function Awake ()
 	
 	if (isEquipment == false && GetComponent(ItemEffect) == null)
 	{
-		Debug.LogError(gameObject.name + " is not equipment so please assign an ItemEffect script to it");
+		//Debug.LogError(gameObject.name + " is not equipment so please assign an ItemEffect script to it");
 	}
 	
 	if (GetComponent(FirstPersonPickUp) != null)
@@ -57,9 +60,9 @@ function isInRango()
 	restaY = protagonista.transform.position.y - transform.position.y;
 	
 	Debug.Log(restaX + " " + restaY);
-	if (restaX >= -0.6 && restaX <= 0.6)
+	if (restaX >= -0.8 && restaX <= 0.8)
 	{
-		if (restaY >= -0.63 && restaY <= 0.63)
+		if (restaY >= -0.83 && restaY <= 0.83)
 		{
 			return true;
 		}
@@ -88,11 +91,22 @@ function PickUpItem ()
 //Debug.Log("PosPlayer" +posPlayer);
 
 	if(canGet){//if its getable or hasnt been gotten.
+	var locatedit:Item;
+	
+	if (contador<dureza){
+	renderer.material.mainTexture=itemIcon2;
+	
+	contador=contador+1;
+	
+	
+	}
+	
+	if(contador==dureza){
 	
 	playersinv.gameObject.SendMessage ("PlayPickUpSound", SendMessageOptions.DontRequireReceiver); //Play sound
 	
 		if(stackable){
-			var locatedit:Item;
+			
 			for(var t:Transform in playersinv.Contents){
 				if(t.name==this.transform.name){//if the item we wanna stack this on has the same name
 					var i:Item=t.GetComponent(Item);
@@ -113,7 +127,7 @@ function PickUpItem ()
 		//If we can get it and the inventory isn't full.
 		if (getit && playersinv.Contents.length < playersinv.MaxContent)
 		{
-		
+			
 		
 			playersinv.AddItem(this.transform);
 			MoveMeToThePlayer(playersinv.itemHolderObject);//moves the object, to the player7
@@ -125,7 +139,10 @@ function PickUpItem ()
 			Debug.Log("Inventory is full");
 			info.guiText.text="Inventario lleno";
 		}
+	contador=0;
+		
 	}
+}
 }
 
 //Moves the item to the Players 'itemHolderObject' and disables it. In most cases this will just be the Inventory object.
@@ -163,9 +180,17 @@ transform.parent = itemHolderObject;
 
 //Drops the Item from the Inventory.
 function DropMeFromThePlayer(makeDuplicate : boolean)
+
 {
+
+
+     
 	if (makeDuplicate == false) //We use this if the object is not stacked and so we can just drop it.
 	{
+	
+
+   
+
 		canGet = true;
 		gameObject.SetActive(true);
 		
@@ -187,11 +212,20 @@ function DropMeFromThePlayer(makeDuplicate : boolean)
 			GetComponent(BoxCollider2D).enabled = true;
 		}
 	
-		GetComponent("Item").enabled = true;
-		
+		 GetComponent("Item").enabled = true;
+	
 		transform.parent = null;
+	
 		DelayPhysics();
-	}
+		
+			 // transform.position = point;
+			 
+			  }
+		
+		
+		
+		
+	
 	else //If the object is stacked we need to make a clone of it and drop the clone instead.
 	{
 		canGet = true;
@@ -204,18 +238,20 @@ function DropMeFromThePlayer(makeDuplicate : boolean)
 			clone.GetComponent(MeshRenderer).enabled = true;
 		}
 		
-		if (clone.GetComponent(Collider) != null)
+		if (clone.GetComponent(Collider2D) != null)
 		{
-			clone.GetComponent(Collider).enabled = true;
+			clone.GetComponent(Collider2D).enabled = true;
 		}
 	
 		clone.GetComponent("Item").enabled = true;
 		
 		clone.transform.parent = null;
+		
 		clone.name = gameObject.name;
 		
 		
 	}
+	
 }
 
 function DelayPhysics ()
@@ -226,6 +262,7 @@ function DelayPhysics ()
 		yield WaitForSeconds (1);
 		Physics.IgnoreCollision(playersinv.transform.parent.collider, collider, false);
 	}
+	
 }
 
 //Drawing an 'I' icon on top of the Item in the scene to keep organised.

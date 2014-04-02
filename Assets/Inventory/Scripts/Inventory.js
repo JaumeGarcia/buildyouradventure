@@ -2,10 +2,11 @@
 var info:GUIText;
 var Contents : Transform[]; //The content of the Inventory
 var MaxContent : int = 12; //The maximum number of items the Player can carry.
-
+var MaxContentFijo : int = 12;
 var DebugMode = false; //If this is turned on the Inventory script will output the base of what it's doing to the Console window.
 
 private var playersInvDisplay : InventoryDisplay; //Keep track of the InventoryDisplay script.
+private var playersInvDisplayFijo : InventoryDisplayFijo;
 
 static var itemHolderObject : Transform; //The object the unactive items are going to be parented to. In most cases this is going to be the Inventory object itself.
 
@@ -17,6 +18,7 @@ function Awake ()
 	itemHolderObject = gameObject.transform;
 	
 	playersInvDisplay = GetComponent(InventoryDisplay);
+	playersInvDisplayFijo = GetComponent(InventoryDisplayFijo);
 	if (playersInvDisplay == null)
 	{
 		Debug.LogError("No Inventory Display script was found on " + transform.name + " but an Inventory script was.");
@@ -43,6 +45,10 @@ function AddItem(Item:Transform)
 	if (playersInvDisplay != null)
 	{
 		playersInvDisplay.UpdateInventoryList();
+	}
+	if (playersInvDisplayFijo != null)
+	{
+		playersInvDisplayFijo.UpdateInventoryList();
 	}
 }
 
@@ -73,6 +79,10 @@ function RemoveItem(Item:Transform)
 			{
 				playersInvDisplay.UpdateInventoryList();
 			}
+			if (playersInvDisplayFijo != null)
+			{
+				playersInvDisplayFijo.UpdateInventoryList();
+			}
 			return;
 		}
 	}
@@ -81,12 +91,48 @@ function RemoveItem(Item:Transform)
 //Dropping an Item from the Inventory
 function DropItem(item)
 {
-	gameObject.SendMessage ("PlayDropItemSound", SendMessageOptions.DontRequireReceiver); //Play sound
+
+ 
+var hecho:boolean=false;
+
+
+
+
+while(!hecho){
+	var distance: float=4.5;
+	var ray : Ray = Camera.main.ScreenPointToRay(Input.mousePosition);    
+	var point : Vector3 = ray.origin + (ray.direction * distance); 
+       	
+    //yield;
+	//item.transform.position=point; 
+	//yield;
+              
+	if(Input.anyKeyDown){
+		yield;
+		hecho=true;}
+	yield;
+
+
+	if(Input.GetMouseButtonDown(0)){
+		yield;
+		hecho=true;
+		gameObject.SendMessage ("PlayDropItemSound", SendMessageOptions.DontRequireReceiver); //Play sound
 	
-	var makeDuplicate = false;
+		var makeDuplicate = false;
+	
+ 		ray = Camera.main.ScreenPointToRay(Input.mousePosition);    
+    	point= ray.origin + (ray.direction * distance); 
+	
+		item.DropMeFromThePlayer(makeDuplicate);
+	
+		item.transform.position=point;
+	
+	
+	
 	if (item.stack == 1) //Drop item
 	{
 		RemoveItem(item.transform);
+		
 	}
 	else //Drop from stack
 	{
@@ -94,12 +140,17 @@ function DropItem(item)
 		makeDuplicate = true;
 	}
 	
-	item.DropMeFromThePlayer(makeDuplicate); //Calling the drop function + telling it if the object is stacked or not.
+	 //Calling the drop function + telling it if the object is stacked or not.
 	
 	if (DebugMode)
 	{
 		Debug.Log(item.name + " has been dropped");
 	}
+}
+
+
+}
+yield;
 }
 
 //This will tell you everything that is in the inventory.
@@ -119,3 +170,6 @@ function OnDrawGizmos ()
 {
 	Gizmos.DrawIcon (Vector3(transform.position.x, transform.position.y + 2.3, transform.position.z), "InventoryGizmo.png", true);
 }
+
+
+
