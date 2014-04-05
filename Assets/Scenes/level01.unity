@@ -19496,7 +19496,7 @@ MonoBehaviour:
   carga_sh: 0
   carga_sa: 0
   carga_ma: 0
-  link: {fileID: 0}
+  link: {fileID: 550595426}
   posplayerx: 0
   posplayery: 0
 --- !u!114 &550595434
