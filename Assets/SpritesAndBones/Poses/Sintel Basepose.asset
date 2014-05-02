@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc57e5e95493434e91e7de286002d45, type: 3}
+  m_Name: Sintel Basepose
+  m_EditorClassIdentifier: 
+  rotations:
+  - name: Hips
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  - name: Tigh.L
+    rotation: {x: 0, y: 0, z: 1, w: -6.71943144e-06}
+  - name: Shin.L
+    rotation: {x: 0, y: 0, z: .00730019296, w: .999973357}
+  - name: Foot.L
+    rotation: {x: 0, y: 0, z: .0168745853, w: .999857605}
+  - name: Chest
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  - name: UpperArm.L
+    rotation: {x: 0, y: 0, z: .871872306, w: -.489733249}
+  - name: LowerArm.L
+    rotation: {x: 0, y: 0, z: 1.41241458e-06, w: 1}
+  - name: Hand.L
+    rotation: {x: 0, y: 0, z: -.0295252632, w: .999564052}
+  - name: Head
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  - name: UpperArm.R
+    rotation: {x: 0, y: 0, z: .875155628, w: .483841509}
+  - name: LowerArm.R
+    rotation: {x: 0, y: 0, z: 3.57491217e-06, w: 1}
+  - name: Hand.R
+    rotation: {x: 0, y: 0, z: .0323097631, w: .999477923}
+  - name: Tigh.R
+    rotation: {x: 0, y: 0, z: .999979496, w: .00640872354}
+  - name: Shin.R
+    rotation: {x: 0, y: 0, z: -.0192617197, w: .99981451}
+  - name: Foot.R
+    rotation: {x: 0, y: 0, z: .0232650526, w: .999729395}
+  positions:
+  - name: Hips
+    position: {x: 0, y: 2.5910182, z: 0}
+  - name: Tigh.L
+    position: {x: .246716976, y: .0200283527, z: 0}
+  - name: Shin.L
+    position: {x: -3.15962501e-09, y: 1.15514612, z: 0}
+  - name: Foot.L
+    position: {x: 4.66614192e-10, y: .995653152, z: 0}
+  - name: Chest
+    position: {x: 0, y: .839999914, z: 0}
+  - name: UpperArm.L
+    position: {x: .370075583, y: .557795763, z: 0}
+  - name: LowerArm.L
+    position: {x: -2.40297524e-08, y: .726513982, z: 0}
+  - name: Hand.L
+    position: {x: 5.7709439e-08, y: .465619206, z: 0}
+  - name: Head
+    position: {x: 0, y: .7900002, z: 0}
+  - name: UpperArm.R
+    position: {x: -.385172069, y: .557796001, z: 0}
+  - name: LowerArm.R
+    position: {x: 1.09213119e-08, y: .656872928, z: 0}
+  - name: Hand.R
+    position: {x: -2.09120383e-08, y: .465619266, z: 0}
+  - name: Tigh.R
+    position: {x: -.230610996, y: .0200288296, z: 0}
+  - name: Shin.R
+    position: {x: -1.26790611e-09, y: 1.15530562, z: 0}
+  - name: Foot.R
+    position: {x: -1.88502334e-08, y: 1.0044055, z: 0}
+  targets: []

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc57e5e95493434e91e7de286002d45, type: 3}
+  m_Name: parat
+  m_EditorClassIdentifier: 
+  rotations:
+  - name: columna
+    rotation: {x: 0, y: 0, z: .0268930364, w: .999638319}
+  - name: cap
+    rotation: {x: 0, y: 0, z: .719686806, w: -.694298923}
+  - name: bdret
+    rotation: {x: 0, y: 0, z: .960211396, w: .279274255}
+  - name: besquerre
+    rotation: {x: 0, y: 0, z: .987465441, w: -.157835305}
+  positions:
+  - name: columna
+    position: {x: -.14930591, y: .0263480768, z: 0}
+  - name: cap
+    position: {x: .0501229241, y: 1.42092717, z: 0}
+  - name: bdret
+    position: {x: -.253334045, y: .861552656, z: 0}
+  - name: besquerre
+    position: {x: .250126034, y: .819937348, z: 0}
+  targets: []
