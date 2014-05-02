@@ -9,7 +9,7 @@ var yMaxLimit = 80;
 
 private var x = 0.0;
 private var y = 0.0;
-
+var zoomSpeed = 3;
 @script AddComponentMenu("Camera-Control/Mouse Orbit")
 
 function Start () {
@@ -34,6 +34,19 @@ function LateUpdate () {
         
         transform.rotation = rotation;
         transform.position = position;
+        
+        if(Input.GetMouseButton(0)){
+        	distance -= zoomSpeed*Time.deltaTime;
+        	if(distance <= 0){
+        		distance = 0;
+        	}
+        }
+        if(Input.GetMouseButton(1)){
+        	distance += zoomSpeed*Time.deltaTime;
+        	if(distance >= 20){
+        		distance = 20;
+        	}
+        }
     }
 }
 
